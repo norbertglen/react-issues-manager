@@ -1,0 +1,110 @@
+[
+  {
+    "id": "MDU6SXNzdWUxODM4MjI5Mg==",
+    "number": 285,
+    "title": "Declarative API for installing global DOM event handlers",
+    "author": { "login": "sophiebits", "url": "https://github.com/sophiebits" },
+    "state": "OPEN",
+    "createdAt": "2013-08-21T21:41:26Z",
+    "url": "https://github.com/facebook/react/issues/285"
+  },
+  {
+    "id": "MDU6SXNzdWUyODA4NjgwOA==",
+    "number": 1159,
+    "title": "Provide a way to handle browser-autocompleted form values on controlled components",
+    "author": { "login": "ericflo", "url": "https://github.com/ericflo" },
+    "state": "OPEN",
+    "createdAt": "2014-02-22T02:05:11Z",
+    "url": "https://github.com/facebook/react/issues/1159"
+  },
+  {
+    "id": "MDU6SXNzdWUyOTMwNTIwNA==",
+    "number": 1253,
+    "title": "iframe contents cause invariant violation",
+    "author": {
+      "login": "matthewwithanm",
+      "url": "https://github.com/matthewwithanm"
+    },
+    "state": "OPEN",
+    "createdAt": "2014-03-12T21:35:00Z",
+    "url": "https://github.com/facebook/react/issues/1253"
+  },
+  {
+    "id": "MDU6SXNzdWUyOTQ2NzcxMA==",
+    "number": 1259,
+    "title": "Stop doing data-*, aria-*, start using dataSet",
+    "author": { "login": "zpao", "url": "https://github.com/zpao" },
+    "state": "OPEN",
+    "createdAt": "2014-03-14T20:30:18Z",
+    "url": "https://github.com/facebook/react/issues/1259"
+  },
+  {
+    "id": "MDU6SXNzdWUzMDkwMDAwNw==",
+    "number": 1355,
+    "title": "touchmove doesn't fire on removed element",
+    "author": { "login": "sophiebits", "url": "https://github.com/sophiebits" },
+    "state": "OPEN",
+    "createdAt": "2014-04-04T22:32:30Z",
+    "url": "https://github.com/facebook/react/issues/1355"
+  },
+  {
+    "id": "MDU6SXNzdWUzNjM3OTQwNA==",
+    "number": 1739,
+    "title": "Support asynchronous server rendering (waiting for data before rendering)",
+    "author": {
+      "login": "fdecampredon",
+      "url": "https://github.com/fdecampredon"
+    },
+    "state": "OPEN",
+    "createdAt": "2014-06-24T12:36:38Z",
+    "url": "https://github.com/facebook/react/issues/1739"
+  },
+  {
+    "id": "MDU6SXNzdWUzNzIwMTM3NA==",
+    "number": 1791,
+    "title": "Add api for focus management",
+    "author": { "login": "bmeck", "url": "https://github.com/bmeck" },
+    "state": "OPEN",
+    "createdAt": "2014-07-05T16:05:32Z",
+    "url": "https://github.com/facebook/react/issues/1791"
+  },
+  {
+    "id": "MDU6SXNzdWU0Mjc0MTA2OQ==",
+    "number": 2193,
+    "title": "getEventKey implementation inconsistent with DOM3 spec / Firefox implementation",
+    "author": { "login": "Daniel15", "url": "https://github.com/Daniel15" },
+    "state": "OPEN",
+    "createdAt": "2014-09-15T04:41:21Z",
+    "url": "https://github.com/facebook/react/issues/2193"
+  },
+  {
+    "id": "MDU6SXNzdWU1ODQ4ODMzOQ==",
+    "number": 3227,
+    "title": "Optimizing Compiler: Tagging ReactElements",
+    "author": {
+      "login": "sebmarkbage",
+      "url": "https://github.com/sebmarkbage"
+    },
+    "state": "OPEN",
+    "createdAt": "2015-02-22T03:21:18Z",
+    "url": "https://github.com/facebook/react/issues/3227"
+  },
+  {
+    "id": "MDU6SXNzdWU3ODg1NDU5MQ==",
+    "number": 3926,
+    "title": "Change event fires extra times before IME composition ends",
+    "author": { "login": "chenxsan", "url": "https://github.com/chenxsan" },
+    "state": "OPEN",
+    "createdAt": "2015-05-21T06:30:30Z",
+    "url": "https://github.com/facebook/react/issues/3926"
+  },
+  {
+    "id": "MDU6SXNzdWU4MTQyNDA0Mw==",
+    "number": 3965,
+    "title": "Support for reparenting",
+    "author": { "login": "dantman", "url": "https://github.com/dantman" },
+    "state": "OPEN",
+    "createdAt": "2015-05-27T12:14:07Z",
+    "url": "https://github.com/facebook/react/issues/3965"
+  }
+]
