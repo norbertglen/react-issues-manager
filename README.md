@@ -1,4 +1,5 @@
-# Github Issues listing for Facebook's react project
+# Github Issues for Facebook's react project
+A simple test web application to show table of Issues from a GitHub facebook/react repository using Github graphql API and a React/Next js client
 ## How to use
 
 - Clone the project.

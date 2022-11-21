@@ -90,7 +90,7 @@ export default function IssuesList() {
 
   return (
     <section>
-      {issues.length > 0 ? (
+      {issues && issues.length > 0 ? (
         <>
           <h3>{`Total: ${issueCount} issues`}</h3>
           <SearchBox onTextChange={handleSearch} />
