@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { useQuery } from "graphql-hooks";
 import Alert from "../../components/alert";
 import IssuesListItem from "./issue-list-item";
+import SearchBox from "../../components/search-input";
 
 export const OPEN_ISSUES_QUERY = `
 query openIssues($first: Int = 40 $after: String $query: String = "repo:facebook/react is:issue is:open") {
@@ -31,6 +32,7 @@ query openIssues($first: Int = 40 $after: String $query: String = "repo:facebook
 `;
 
 const ITEMS_PER_PAGE = 10;
+export const DEFAULT_QUERY_STRING = "repo:facebook/react is:issue is:open";
 export const openIssuesQueryOptions = (skip) => ({
   variables: {
     first: ITEMS_PER_PAGE,
@@ -49,17 +51,31 @@ export const openIssuesQueryOptions = (skip) => ({
 
 export default function IssuesList() {
   const [skip, setSkip] = useState();
+  const [query, setQuery] = useState();
   const { loading, error, data, refetch } = useQuery(
     OPEN_ISSUES_QUERY,
     openIssuesQueryOptions(skip)
   );
 
   const handleRefetch = () =>
-    refetch({ variables: { after: skip, first: ITEMS_PER_PAGE } });
+    refetch({ variables: { after: skip, query, first: ITEMS_PER_PAGE } });
 
   const getNext = () => {
     setSkip(endCursor);
   };
+
+  const handleSearch = useCallback(
+    (searchString) => {
+      setQuery(searchString)
+      refetch({
+        variables: {
+          query: `${DEFAULT_QUERY_STRING} in:title ${searchString}`,
+          first: ITEMS_PER_PAGE,
+        },
+      });
+    },
+    []
+  );
 
   if (error) return <Alert message="Error loading issues." type="error" />;
   if (!data) return <div>Loading</div>;
@@ -77,6 +93,7 @@ export default function IssuesList() {
       {issues.length > 0 ? (
         <>
           <h3>{`Total: ${issueCount} issues`}</h3>
+          <SearchBox onTextChange={handleSearch} />
           <table>
             <thead>
               <tr>
