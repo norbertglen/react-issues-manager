@@ -7,3 +7,68 @@ body {
   margin: 0;
   padding: 25px 50px;
 }
+a {
+  color: #d95c22;
+}
+
+form {
+  border-bottom: 1px solid #ececec;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: 20px;
+}
+input {
+  display: block;
+  margin-bottom: 10px;
+}
+section {
+  padding-bottom: 20px;
+}
+div {
+  align-items: center;
+  display: flex;
+}
+a {
+  font-size: 14px;
+  margin-right: 10px;
+  text-decoration: none;
+  padding-bottom: 0;
+  border: 0;
+}
+
+button {
+  align-items: center;
+  background-color: #d95c22;
+  border: 0;
+  color: white;
+  display: flex;
+  padding: 5px 7px;
+}
+
+button:focus {
+  outline: none;
+}
+
+button.danger {
+  background-color: #dc3545;
+}
+button.default {
+  background-color: #808080;
+}
+
+button:disabled,
+button[disabled]{
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.action-buttons button {
+  margin-right: 3px;
+}
+
+.more:before {
+  border-width: 6px 4px 0 4px;
+  border-color: #ffffff transparent transparent transparent;
+}

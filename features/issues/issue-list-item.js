@@ -1,31 +1,41 @@
 import React from "react";
+import { useReducer } from "react";
+import DeleteButton from "./delete-button";
+import IssueUpdateForm from "./issue-update-form";
 
-export default function IssuesListItem({ issue }) {
+export default function IssuesListItem({ issue, handleRefetch }) {
+  const [editMode, toggleEditMode] = useReducer((state) => !state, false);
   const creationDate = new Date(issue.createdAt).toLocaleString();
-  const handleDelete = () => {};
-  const handleEdit = () => {};
 
   return (
     <tr role="listItem">
-      <td>{creationDate}</td>
-      <td>
-        <a href={issue.url} target="_blank">
-          {issue.title}
-        </a>
-      </td>
-      <td>
-        <a href={issue?.author?.url} target="_blank">
-          {issue?.author?.login}
-        </a>
-      </td>
-      <td>{issue.state}</td>
+      {editMode ? (
+        <td colSpan={4}>
+          <IssueUpdateForm issue={issue} onSubmission={handleRefetch} />
+        </td>
+      ) : (
+        <>
+          <td>{creationDate}</td>
+          <td>
+            <a href={issue.url} target="_blank">
+              {issue.title}
+            </a>
+          </td>
+          <td>
+            <a href={issue?.author?.url} target="_blank">
+              {issue?.author?.login}
+            </a>
+          </td>
+          <td>{issue.state}</td>
+        </>
+      )}
       <td>
         <div className="action-buttons">
-          <button className="default" role="button" onClick={handleDelete}>
-            Delete
-          </button>
-          <button className="default" role="button" onClick={handleEdit}>
-            Edit
+          {!editMode ? (
+            <DeleteButton id={issue.id} onDelete={handleRefetch} />
+          ) : null}
+          <button className="default" role="button" onClick={toggleEditMode}>
+            {editMode ? "Cancel" : "Edit"}
           </button>
         </div>
       </td>
