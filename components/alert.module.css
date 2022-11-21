@@ -1,0 +1,17 @@
+.alert {
+  padding: 1.5em;
+  font-size: 14px;
+  color: white;
+}
+
+.error {
+  background-color: #dc3545;
+}
+
+.info {
+  background-color: lightblue;
+}
+
+.warning {
+  background-color: orange;
+}
